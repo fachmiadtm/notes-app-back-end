@@ -1,2 +1,4 @@
 node_modules
 dicoding-tutorial-keypair.pem
+.env
+.prod.env
