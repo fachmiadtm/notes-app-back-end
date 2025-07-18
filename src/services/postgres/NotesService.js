@@ -27,7 +27,7 @@ class NotesService {
 
     return result.rows[0].id;
   }
-  
+
   async getNotes() {
     const result = await this._pool.query('SELECT * FROM notes');
     return result.rows.map(mapDBToModel);
@@ -45,7 +45,7 @@ class NotesService {
     }
     return result.rows.map(mapDBToModel)[0];
   }
-  
+
   async editNoteById(id, { title, body, tags }){
     const updatedAt = new Date().toISOString();
     const query = {

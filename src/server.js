@@ -16,7 +16,7 @@ const init = async () => {
       },
     },
   });
-  
+
   await server.register({
     plugin: notes,
     options: {
@@ -24,7 +24,7 @@ const init = async () => {
       validator: NotesValidator
     },
   });
-  
+
   server.ext('onPreResponse', (request, h) => {
     const { response } = request;
 
@@ -39,7 +39,7 @@ const init = async () => {
 
     return h.continue;
   });
-  
+
 
 
   await server.start();
